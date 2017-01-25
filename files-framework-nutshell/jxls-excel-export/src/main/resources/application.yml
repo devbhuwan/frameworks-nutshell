@@ -1,0 +1,3 @@
+server:
+  context-path: /jxls
+  port: 9125
