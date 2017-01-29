@@ -9,13 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>files-framework-nutshell</artifactId>
+    <artifactId>data-exchange-technologies</artifactId>
     <packaging>pom</packaging>
-
     <modules>
-        <module>apache-poi-itextpdf-excel-to-pdf</module>
-        <module>documents4j-excel-to-pdf-and-docx</module>
-        <module>jxls-excel-export</module>
+        <module>eureka-service-discovery-impl</module>
     </modules>
 
 
