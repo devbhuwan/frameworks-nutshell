@@ -13,6 +13,9 @@ public class EurekaServiceRegistrar implements ServiceRegistrar {
     @Override
     public void register(Map<String, String> params) {
 
+
+        com.netflix.config.DynamicPropertyFactory
+
     }
 
 }

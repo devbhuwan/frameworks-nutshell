@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>eureka-service-discovery-impl</module>
+        <module>eureka-server-runner</module>
     </modules>
 
 
