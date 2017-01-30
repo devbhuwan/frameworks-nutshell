@@ -22,8 +22,11 @@
     <build>
         <resources>
             <resource>
-                <directory>${project.basedir}/eureka</directory>
+                <directory>src/main/resources/eureka</directory>
                 <filtering>false</filtering>
+                <includes>
+                    <include>**/*</include>
+                </includes>
                 <targetPath>${warPath}</targetPath>
             </resource>
         </resources>
@@ -35,7 +38,7 @@
                 <executions>
                     <execution>
                         <id>unpack-war</id>
-                        <phase>prepare-package</phase>
+                        <phase>generate-resources</phase>
                         <goals>
                             <goal>unpack</goal>
                         </goals>
