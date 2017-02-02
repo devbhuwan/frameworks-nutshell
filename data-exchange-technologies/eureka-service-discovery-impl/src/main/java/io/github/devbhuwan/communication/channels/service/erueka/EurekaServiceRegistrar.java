@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import static io.github.devbhuwan.communication.channels.api.ServiceDiscovery.*;
+import static io.github.devbhuwan.communication.channels.api.ServiceDiscoveryConstants.*;
 
 /**
  * @author Bhuwan Prasad Upadhyay
@@ -58,9 +58,9 @@ public class EurekaServiceRegistrar implements ServiceRegistrar {
                 .setInstanceId(buildInstanceId(params.get(SERVICE_NAME)))
                 .setPort(servicePort) /*SERVICE HOST SERVER PORT*/
                 .setVIPAddress(params.get(SERVICE_NAME))
-                .setHealthCheckUrls(buildHealthCheckUrl(params.get(HEALTH_CHECK_PATH)), null, null) /*SERVICE HEALTH CHECK URL*/
-                .setHomePageUrl(buildHomePageUrl(params.get(SERVICE_NAME)), null)
-                .setStatusPageUrl(buildStatusUrl(params.get(STATUS_PATH)), null)
+                .setHealthCheckUrls(buildHealthCheckUrl(params.get(SERVICE_HEALTH_PATH)), null, null) /*SERVICE HEALTH CHECK URL*/
+                .setHomePageUrl(buildHomePageUrl(params.get(SERVICE_PATH)), null)
+                .setStatusPageUrl(buildStatusUrl(params.get(SERVICE_STATUS_PATH)), null)
                 .setLeaseInfo(LeaseInfo.Builder.newBuilder().setDurationInSecs(10).build())
                 .build();
     }

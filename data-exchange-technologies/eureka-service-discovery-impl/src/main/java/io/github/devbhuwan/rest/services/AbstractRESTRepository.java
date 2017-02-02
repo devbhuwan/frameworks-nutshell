@@ -9,7 +9,7 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.Map;
 
-import static io.github.devbhuwan.communication.channels.api.ServiceDiscovery.HEALTH_CHECK_PATH;
+import static io.github.devbhuwan.communication.channels.api.ServiceDiscoveryConstants.*;
 
 /**
  * @author Bhuwan Prasad Upadhyay
@@ -25,9 +25,13 @@ public abstract class AbstractRESTRepository {
 
     @GET
     @Path(HEALTH_CHECK_PATH)
-    public Response getMsg() {
+    public Response serviceHealth() {
         return Response.status(200).entity("Ok").build();
     }
 
-
+    @GET
+    @Path(STATUS_CHECK_PATH)
+    public Response serviceStatus() {
+        return Response.status(200).build();
+    }
 }
