@@ -98,7 +98,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>mvn.cmd</executable>
+                            <executable>mvn</executable>
                             <arguments>
                                 <argument>-f</argument>
                                 <argument>${project.basedir}/pom.xml</argument>

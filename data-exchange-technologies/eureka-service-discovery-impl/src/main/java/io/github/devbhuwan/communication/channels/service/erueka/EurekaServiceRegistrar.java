@@ -1,6 +1,7 @@
 package io.github.devbhuwan.communication.channels.service.erueka;
 
 import com.netflix.appinfo.*;
+import com.netflix.config.ConfigurationManager;
 import com.netflix.discovery.DefaultEurekaClientConfig;
 import com.netflix.discovery.DiscoveryClient;
 import com.netflix.discovery.EurekaClient;
@@ -33,7 +34,13 @@ public class EurekaServiceRegistrar implements ServiceRegistrar {
         this.serviceHostname = "localhost";
         this.servicePort = 9898;
         this.nodeId = "node1";
-        this.serviceRootPath = "/";
+        this.serviceRootPath = "/eureka-impl/rest";
+        this.initEurekaConfiguration();
+    }
+
+    private void initEurekaConfiguration() {
+        ConfigurationManager.getConfigInstance().setProperty("eureka.region", "default");
+        ConfigurationManager.getConfigInstance().setProperty("eureka.serviceUrl.default", "http://localhost:8080/eureka/v2/");
     }
 
     @Override
