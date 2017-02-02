@@ -12,9 +12,10 @@
     <artifactId>data-exchange-technologies</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>eureka-service-discovery-impl</module>
         <module>eureka-server-runner</module>
+        <module>eureka-service-discovery-impl</module>
+        <module>eureka-spring-boot-impl</module>
+        <module>soap-services-nutshell</module>
     </modules>
-
 
 </project>
